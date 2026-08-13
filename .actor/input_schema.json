@@ -1,0 +1,70 @@
+{
+    "title": "Consumer Complaint Tracker Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "searchTerm": {
+            "title": "Search term",
+            "type": "string",
+            "editor": "textfield",
+            "description": "Free-text search across company name, product, and complaint narrative (e.g. \"Wells Fargo\", \"overdraft fee\", \"student loan servicer\"). Leave blank to skip keyword filtering."
+        },
+        "product": {
+            "title": "Product",
+            "type": "string",
+            "editor": "select",
+            "description": "Limit to a specific financial product category.",
+            "enum": [
+                "all",
+                "Credit reporting, credit repair services, or other personal consumer reports",
+                "Debt collection",
+                "Mortgage",
+                "Checking or savings account",
+                "Credit card or prepaid card",
+                "Money transfer, virtual currency, or money service",
+                "Student loan",
+                "Vehicle loan or lease",
+                "Payday loan, title loan, or personal loan",
+                "Debt or credit management"
+            ],
+            "enumTitles": [
+                "All products",
+                "Credit reporting / consumer reports",
+                "Debt collection",
+                "Mortgage",
+                "Checking or savings account",
+                "Credit card or prepaid card",
+                "Money transfer / virtual currency",
+                "Student loan",
+                "Vehicle loan or lease",
+                "Payday / title / personal loan",
+                "Debt or credit management"
+            ],
+            "default": "all"
+        },
+        "state": {
+            "title": "State",
+            "type": "string",
+            "editor": "textfield",
+            "description": "Two-letter US state code to limit to complaints from consumers there (e.g. \"CA\"). Leave blank for all states."
+        },
+        "daysBack": {
+            "title": "Days back",
+            "type": "integer",
+            "editor": "number",
+            "description": "How many days back from today to search, based on the date CFPB received the complaint.",
+            "default": 30,
+            "minimum": 1,
+            "maximum": 365
+        },
+        "maxResults": {
+            "title": "Max results",
+            "type": "integer",
+            "editor": "number",
+            "description": "Maximum number of complaints to return, most recently received first.",
+            "default": 25,
+            "minimum": 1,
+            "maximum": 100
+        }
+    }
+}

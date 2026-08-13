@@ -1,0 +1,13 @@
+{
+    "actorSpecification": 1,
+    "name": "consumer-complaint-tracker",
+    "title": "Consumer Complaint Tracker — CFPB Financial Complaints",
+    "description": "Search new consumer complaints filed with the Consumer Financial Protection Bureau against banks, lenders, and financial-service companies. Filter by company, product line, state, and date range. For reputation monitoring, competitive intelligence, and compliance teams.",
+    "version": "0.1",
+    "meta": {
+        "templateId": "custom-no-proxy"
+    },
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "dockerfile": "../Dockerfile"
+}

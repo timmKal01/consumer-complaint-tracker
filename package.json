@@ -1,0 +1,15 @@
+{
+    "name": "consumer-complaint-tracker",
+    "version": "0.1.0",
+    "type": "module",
+    "description": "Search new CFPB consumer financial complaints by company, product, state, and date range.",
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "dependencies": {
+        "apify": "^3.2.6"
+    },
+    "scripts": {
+        "start": "node src/main.js"
+    }
+}
