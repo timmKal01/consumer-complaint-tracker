@@ -40,10 +40,19 @@ function toDateOnly(date) {
     return date.toISOString().slice(0, 10);
 }
 
+// CFPB renamed or split these categories; recent complaints only carry the new names.
+const PRODUCT_ALIASES = {
+    'Credit card or prepaid card': ['Credit card', 'Prepaid card'],
+    'Credit reporting, credit repair services, or other personal consumer reports': ['Credit reporting or other personal consumer reports'],
+    'Payday loan, title loan, or personal loan': ['Payday loan, title loan, personal loan, or advance loan'],
+};
+
 export async function fetchComplaints({ searchTerm, product, state, startDate, maxResults }) {
     const url = new URL(BASE_URL);
     if (searchTerm) url.searchParams.set('search_term', searchTerm);
-    if (product && product !== 'all') url.searchParams.set('product', product);
+    if (product && product !== 'all') {
+        for (const p of PRODUCT_ALIASES[product] ?? [product]) url.searchParams.append('product', p);
+    }
     if (state) url.searchParams.set('state', state.toUpperCase());
     url.searchParams.set('date_received_min', toDateOnly(startDate));
     url.searchParams.set('date_received_max', toDateOnly(new Date()));

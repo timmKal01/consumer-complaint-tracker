@@ -24,7 +24,7 @@ tracking a company's own complaint trends.
 | Field | Type | Description |
 |---|---|---|
 | `searchTerm` | string (optional) | Free-text search across company name, product, and complaint narrative. Leave blank to skip keyword filtering. |
-| `product` | string | Limit to a financial product category (`"Mortgage"`, `"Debt collection"`, `"Credit card or prepaid card"`, etc.), or `"all"`. Default `"all"`. |
+| `product` | string | Limit to a financial product category (`"Mortgage"`, `"Debt collection"`, `"Credit card"`, `"Prepaid card"`, etc.), or `"all"`. Default `"all"`. |
 | `state` | string (optional) | Two-letter US state code to limit to complaints from consumers there. Leave blank for nationwide. |
 | `daysBack` | number | How many days back from today to search, by date received. Default `30`, max `365`. |
 | `maxResults` | number | Max complaints to return, most recently received first. Default `25`, max `100`. |
