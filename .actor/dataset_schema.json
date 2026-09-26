@@ -1,0 +1,78 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": [
+                    "complaintId",
+                    "company",
+                    "product",
+                    "subProduct",
+                    "issue",
+                    "subIssue",
+                    "state",
+                    "dateReceived",
+                    "companyResponse",
+                    "timely",
+                    "hasNarrative",
+                    "narrative"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "complaintId": {
+                        "label": "Complaint ID",
+                        "format": "text"
+                    },
+                    "company": {
+                        "label": "Company",
+                        "format": "text"
+                    },
+                    "product": {
+                        "label": "Product",
+                        "format": "text"
+                    },
+                    "subProduct": {
+                        "label": "Sub product",
+                        "format": "text"
+                    },
+                    "issue": {
+                        "label": "Issue",
+                        "format": "text"
+                    },
+                    "subIssue": {
+                        "label": "Sub issue",
+                        "format": "text"
+                    },
+                    "state": {
+                        "label": "State",
+                        "format": "text"
+                    },
+                    "dateReceived": {
+                        "label": "Date received",
+                        "format": "date"
+                    },
+                    "companyResponse": {
+                        "label": "Company response",
+                        "format": "text"
+                    },
+                    "timely": {
+                        "label": "Timely",
+                        "format": "text"
+                    },
+                    "hasNarrative": {
+                        "label": "Has narrative",
+                        "format": "boolean"
+                    },
+                    "narrative": {
+                        "label": "Narrative",
+                        "format": "text"
+                    }
+                }
+            }
+        }
+    }
+}
