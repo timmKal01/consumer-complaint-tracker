@@ -13,11 +13,11 @@
                     "issue",
                     "subIssue",
                     "state",
+                    "zipCode",
                     "dateReceived",
                     "companyResponse",
                     "timely",
-                    "hasNarrative",
-                    "narrative"
+                    "submittedVia"
                 ]
             },
             "display": {
@@ -51,6 +51,10 @@
                         "label": "State",
                         "format": "text"
                     },
+                    "zipCode": {
+                        "label": "Zip code",
+                        "format": "text"
+                    },
                     "dateReceived": {
                         "label": "Date received",
                         "format": "date"
@@ -63,12 +67,8 @@
                         "label": "Timely",
                         "format": "text"
                     },
-                    "hasNarrative": {
-                        "label": "Has narrative",
-                        "format": "boolean"
-                    },
-                    "narrative": {
-                        "label": "Narrative",
+                    "submittedVia": {
+                        "label": "Submitted via",
                         "format": "text"
                     }
                 }
