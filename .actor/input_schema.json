@@ -7,7 +7,7 @@
             "title": "Search term",
             "type": "string",
             "editor": "textfield",
-            "description": "Free-text search across company name, product, and complaint narrative (e.g. \"Wells Fargo\", \"overdraft fee\", \"student loan servicer\"). Leave blank to skip keyword filtering."
+            "description": "Keyword search, run by the CFPB's own search (e.g. \"Wells Fargo\", \"overdraft fee\", \"student loan servicer\"). Leave blank to skip keyword filtering."
         },
         "product": {
             "title": "Product",

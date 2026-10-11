@@ -23,7 +23,7 @@ tracking a company's own complaint trends.
 
 | Field | Type | Description |
 |---|---|---|
-| `searchTerm` | string (optional) | Free-text search across company name, product, and complaint narrative. Leave blank to skip keyword filtering. |
+| `searchTerm` | string (optional) | Keyword search, run by the CFPB's own search (e.g. a brand name or "overdraft fee"). Leave blank to skip keyword filtering. |
 | `product` | string | Limit to a financial product category (`"Mortgage"`, `"Debt collection"`, `"Credit card"`, `"Prepaid card"`, etc.), or `"all"`. Default `"all"`. |
 | `state` | string (optional) | Two-letter US state code to limit to complaints from consumers there. Leave blank for nationwide. |
 | `daysBack` | number | How many days back from today to search, by date received. Default `30`, max `365`. |
@@ -49,15 +49,16 @@ One record per complaint:
   "companyResponse": "Closed with explanation",
   "companyPublicResponse": "Company has responded to the consumer and the CFPB and chooses not to provide a public response",
   "timely": "Yes",
-  "hasNarrative": true,
-  "narrative": "I am beyond disappointed and extremely frustrated with the level of customer service I received...",
+  "narrative": null,
   "tags": null
 }
 ```
 
-`narrative` is `null` when the consumer didn't consent to publish their
-complaint text (CFPB only publishes narratives with consumer consent,
-and always redacts personal info as `XXXX`).
+**About `narrative`:** the CFPB's API no longer returns consumers' own
+complaint text (checked October 2026), so `narrative` is currently always
+`null`. Every other field above is filled in as before. The field stays in
+the output so your integrations keep working if the CFPB publishes the
+text again.
 
 A search with no matches in the requested window returns no items but
 is still billed once for the search.
