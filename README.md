@@ -82,5 +82,5 @@ the search returns 0 complaints or 100.
 
 ## Related products
 
-- [Product Recall Alert](https://github.com/timmKal01/product-recall-alert) — the FDA equivalent for drug, food, and medical device recalls
-- [SEC 8-K Material Event Tracker](https://github.com/timmKal01/sec-8k-material-event-tracker) — material events from public company filings
+- [FDA Recall Tracker](https://apify.com/m_ctim/product-recall-alert): the FDA equivalent for drug, food, and medical device recalls
+- [SEC 8-K Tracker](https://apify.com/m_ctim/sec-8k-material-event-tracker): material events from public company filings
